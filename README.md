@@ -18,6 +18,6 @@ Ensure these are installed and configured properly on your system before proceed
 
 ### Backend Setup
 
-The backend project uses an H2 in-memory database for development. Here’s how to get it up and running:
+The backend project uses an H2 in-memory database for development.
 
 
