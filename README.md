@@ -21,3 +21,11 @@ Ensure these are installed and configured properly on your system before proceed
 The backend project uses an H2 in-memory database for development.
 
 
+### Frontend Setup
+
+Run:
+npm install
+npm start
+
+
+
