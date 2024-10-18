@@ -24,8 +24,8 @@ The backend project uses an H2 in-memory database for development.
 ### Frontend Setup
 
 Run:
-npm install
-npm start
+- npm install
+- npm start
 
 
 
