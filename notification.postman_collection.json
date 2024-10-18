@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "151f105c-9e6b-4a6c-a817-c111fada790a",
+		"name": "notification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29571982"
+	},
+	"item": [
+		{
+			"name": "Create Notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"messageId\": 1,\n    \"messasge\": \"Hello\",\n    \"channel\": \"Push\",\n    \"timestamp\": \"2023-10-17T10:00:00\",\n    \"delivered\": true,\n    \"subscribedCategories\": [\"Sports\",\"Finance\",\"Movies\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notification",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/notifications/Carlos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notifications",
+						"Carlos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"johndoe\",\n    \"password\": \"MTIz\",\n    \"email\": \"johndoe@example.com\",\n    \"phoneNumber\": \"1234567890\",\n    \"subscribedCategories\": [\"Sports\",\"Finance\",\"Movies\"],\n    \"notificationChannels\": [\"Email\", \"SMS\",\"Push\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sing in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Carlos",
+							"type": "text"
+						},
+						{
+							"key": "encodedPassword",
+							"value": "MTIz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/Carlos/subscribed-categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Carlos",
+						"subscribed-categories"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request GET 'http://localhost:8080/api/users/johndoe/subscribed-categories'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "GetChannels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/Carlos/notification-channels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"Carlos",
+						"notification-channels"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request GET 'http://localhost:8080/api/users/Carlos/notification-channels'\n"
+			},
+			"response": []
+		}
+	]
+}
